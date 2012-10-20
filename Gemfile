@@ -6,7 +6,11 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'geocoder'
 gem 'sf_transit', :git => 'git@github.com:benastan/sftransit.git' 
+gem 'next_muni', :git => 'git@github.com:benastan/next_muni_gem.git'
+gem 'better_bart', :git => 'git@github.com:benastan/better_bart.git'
+gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.
