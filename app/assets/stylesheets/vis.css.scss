@@ -11,17 +11,26 @@ body {
 }
 
 /* The header */
-#gocode {
+#title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 16px;
   padding-left: 5px;
   vertical-align: 20%;
-  color: grey;
+  color: white;
   border-left:  1px solid #ccc;
 }
 #logo {
   padding-right: 4px;
+}
+
+#header {
+  margin: 0 auto;
+  width: 100%;
+  height:45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d90e3d), to(#000)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #d90e3d,  #000); /* for firefox 3.6+ */
+  border-bottom: 1px solid #ccc;
 }
 
 // queue
@@ -29,16 +38,29 @@ body {
 #queue {
   margin-top: 30px;
   width: 300px;
+  height: 1000px;
   border-top:2px solid;
   border-left: 2px solid;
   border-right: 2px solid;
   float: left;
 }
 
-.complaint {
+#complaint_header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 10px;
   position:relative;
-  height:200px;
+  height:20px;
+  border-bottom: 4px solid;
+  border-bottom-opacity: .5;
+}
+
+.complaint_category {
+  position:relative;
+  height:90px;
   border-bottom: 3px solid;
+  border-bottom-opacity: .3;
 }
 
 // wrappers
