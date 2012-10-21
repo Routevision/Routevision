@@ -1,4 +1,7 @@
-= simple_form_for @service_report do |f|
-  - @service_report.fields_for(0).each do |field|
-    = f.input field, @service_report.options_for(field)
-  = f.submit "Send Report"
+#header
+  = image_tag 'logo.png'
+#form 
+  = simple_form_for @service_report do |f|
+    - @service_report.fields_for(0).each do |field|
+      = f.input field, @service_report.options_for(field)
+    = f.submit "Send Report"

@@ -1,3 +1,42 @@
 // Place all the styles related to the ServiceReports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, html {
+  margin: 0;
+  background: #dbdbdb;
+}
+
+#header {
+  border-bottom: 3px solid #570d0d;
+  padding: 8px 0 0;
+  text-align: center;
+  background: #eb134b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #eb134b 0%, #bc0528 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb134b), color-stop(100%,#bc0528)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #eb134b 0%,#bc0528 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb134b', endColorstr='#bc0528',GradientType=0 ); /* IE6-9 */
+}
+
+#new_service_report, .edit_service_report {
+  padding: 10px;
+  text-align: center;
+
+  select {
+    font-size: 20px;
+  }
+
+  select, input, textarea {
+    padding: 1%;
+    width: 98%;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  input[type=submit] {
+    height: 2em;
+  }
+}
