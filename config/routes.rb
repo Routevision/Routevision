@@ -20,4 +20,8 @@ Routevision::Application.routes.draw do
   end
 
   root :to => 'routes#testpage'
+
+  scope '/google' do
+    match 'map', :to => 'routes#map'
+  end
 end

@@ -12,6 +12,3 @@ class Routevision.Models.Route extends Backbone.Model
 class Routevision.Collections.RoutesCollection extends Backbone.Collection
   model: Routevision.Models.Route
   url: '/api/routes'
-
-
-
