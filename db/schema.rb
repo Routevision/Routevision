@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121020192312) do
+ActiveRecord::Schema.define(:version => 20121021172119) do
+
+  create_table "service_report_categories", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "service_reports", :force => true do |t|
+    t.decimal  "lat"
+    t.decimal  "lng"
+    t.string   "address"
+    t.string   "email"
+    t.string   "prefered_response_method"
+    t.integer  "service_report_category_id"
+    t.boolean  "commendation"
+    t.integer  "axis_id"
+    t.string   "axis_type"
+    t.integer  "vehicle_id"
+    t.boolean  "responded"
+    t.string   "response_text"
+    t.string   "response_reply_to"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "sf_transit_junctions", :force => true do |t|
     t.decimal  "lat",        :precision => 15, :scale => 10
