@@ -30,6 +30,12 @@ class ServiceReportsController < ApplicationController
     render :json => ServiceReport.all
   end
 
+  def dashboard
+    sr = ServiceReport
+    @c = ServiceReportCategory.all
+    render :index
+  end
+
   def show
     service_report = ServiceReport.find params[:id] rescue nil
     render_json service_report

@@ -26,6 +26,9 @@ Routevision::Application.routes.draw do
 
   resources :service_reports, :only => :index
   match :stevens_playground, :to => 'routes#testpage'
+  scope '/admin' do
+    match :dashboard, :controller => :service_reports, :action => :dashboard
+  end
   match '/vehicles/:vehicle_id/service_reports', :controller => :service_reports
   root :controller => :service_reports, :action => :new, :as => '/service_reports'
 end

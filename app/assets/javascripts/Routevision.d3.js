@@ -156,33 +156,3 @@ function plot_bunch(bunch) {
 // create graph now that we've added presentation config
 var l1 = new LineGraph({containerId: 'graph1', data: data2});
 var l2 = new LineGraph({containerId: 'graph2', data: data3});
-
-
-setInterval(function() {
-        /*
-        * The following will simulate live updating of the data (see dataA, dataB, dataC etc in data.js which are real examples)
-        * This is being simulated so this example functions standalone without a backend server which generates data such as data.js contains.
-        */
-        // for each data series ...
-        var newData = [];
-        data.values.forEach(function(dataSeries, index) {
-            // take the first value and move it to the end
-            // and capture the value we're moving so we can send it to the graph as an update
-            var v = dataSeries.shift();
-            dataSeries.push(v);
-            // put this value in newData as an array with 1 value
-            newData[index] = [v];
-        })
-        
-        // we will reuse dataA each time
-        dataA.values = newData;
-        // increment time 1 step
-        dataA.start = dataA.start + dataA.step;
-        dataA.end = dataA.end + dataA.step; 
-                    
-        l1.slideData(dataA);
-    }, 2000);
-
-
-
-

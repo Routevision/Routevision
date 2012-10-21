@@ -1,0 +1,27 @@
+#tiplayer{:style => "position:absolute; visibility:hidden; z-index:10000;"}
+#header
+  = image_tag "logo.png"
+  %span#title Admin Dashboard
+#content
+  .container#bigwrap
+    .row-fluid
+      .span8#map-container
+        #wrapdiv.clearfix
+          #graph1.aGraph
+          #customer-title.title Complaints
+          #graph2.aGraph
+          #median-title.title Resolution time
+          #map
+      .span4
+        #queue.clearfix
+          - @c.each do |cat|
+            .category
+              %h3
+                %span.count= cat.service_reports.count
+                %span.category-title= cat.title
+              - cat.service_reports.each do |sr|
+                .report
+                  %h6.route-title
+                    = sr.axis.route.title
+                  %span.time= sr.created_at.to_s(:short)
+                  %p= sr.report_text
