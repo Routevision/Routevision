@@ -811,7 +811,7 @@ function LineGraph(argsMap) {
 		var mouseX = event.pageX-hoverLineXOffset;
 		var mouseY = event.pageY-hoverLineYOffset;
 		
-		//debug("MouseOver graph [" + containerId + "] => x: " + mouseX + " y: " + mouseY + "  height: " + h + " event.clientY: " + event.clientY + " offsetY: " + event.offsetY + " pageY: " + event.pageY + " hoverLineYOffset: " + hoverLineYOffset)
+		debug("MouseOver graph [" + containerId + "] => x: " + mouseX + " y: " + mouseY + "  height: " + h + " event.clientY: " + event.clientY + " offsetY: " + event.offsetY + " pageY: " + event.pageY + " hoverLineYOffset: " + hoverLineYOffset)
 		if(mouseX >= 0 && mouseX <= w && mouseY >= 0 && mouseY <= h) {
 			// show the hover line
 			hoverLine.classed("hide", false);

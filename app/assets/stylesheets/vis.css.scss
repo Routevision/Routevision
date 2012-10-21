@@ -55,6 +55,11 @@ body {
 
 // wrappers
 
+.graphwrap {
+  width: 355px;
+  float: left;
+}
+
 #wrapdiv {
   width: 800px;
   float: left;
@@ -94,6 +99,7 @@ body {
 /* Map styling */
 
 #map {
+  margin-top: 5px;
   position: relative;
   opacity: .4;
   margin-left:-140px;
