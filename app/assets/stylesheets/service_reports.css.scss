@@ -23,7 +23,12 @@ body, html {
 }
 
 .container {
-  width: 1050px;
+  width: 1220px;
+  background: white;
+}
+
+#map-container {
+  margin-top: 40px;
 }
 
 #new_service_report, .edit_service_report {

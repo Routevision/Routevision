@@ -47,7 +47,7 @@ d3.json("/assets/sf_dcp.geojson", function(json) {
         .data(json.features)
         .enter().append("path")
           .attr("d", path)
-          .attr("fill", "lightgrey");
+          .attr("fill", "black");
 
 });
 
