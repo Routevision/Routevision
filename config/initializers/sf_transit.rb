@@ -34,6 +34,7 @@ SfTransit::Route.class_eval do
 end
 
 SfTransit::Leg.class_eval do
+  has_many :service_reports, :as => :axis
   def as_json options = {}
     super(options.merge(:except => [:created_at, :updated_at, :transfer_id]))
   end
