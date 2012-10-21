@@ -62,3 +62,17 @@ var data3 = {"start":1938982200000,"end":1939413600000,"step":600000,"names":["D
 ]
 ,"colors":["#d90e3d","steelblue"]
 };
+
+function makeArrayOf(value, length) {
+  var arr = [], i = length;
+  while (i--) {
+    arr[i] = value;
+  }
+  return arr;
+}
+
+var data2x = Array(data2);
+data2x["start"] = 1350777661;
+data2x["end"] = 1350835261;
+data2x["values"][0] = makeArrayOf(3,data2["values"][0].length);
+data2x["values"][1] = makeArrayOf(2,data2["values"][1].length);
