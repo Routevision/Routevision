@@ -1,43 +1,78 @@
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    background: rgba(0, 0, 0, 0.03);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.03);
 }
 .background {
-    fill: none;
-    pointer-events: all;
-  opacity: .1;
+  fill: none;
+  pointer-events: all;
 }
 
 /* The header */
-#header {
-    margin: 0 auto;
-  width: 1000px;
-  border-bottom: 1px solid #ccc;
-}
-#headwrap {
-  width: 200px;
-  margin: 0 auto;
-  padding-left: 30px;
-}
-#gocode {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    padding-left: 5px;
-    vertical-align: 20%;
-  color: grey;
-    border-left:  1px solid #ccc;
+#title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 5px;
+  vertical-align: 20%;
+  color: white;
+  border-left:  1px solid #ccc;
 }
 #logo {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 
-#wrapdiv {
-  width: 1000px;
+#header {
   margin: 0 auto;
+  width: 100%;
+  height:45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d90e3d), to(#000)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #d90e3d,  #000); /* for firefox 3.6+ */
+  border-bottom: 1px solid #ccc;
+}
+
+// queue
+
+#queue {
+  margin-top: 30px;
+  width: 300px;
+  height: 1000px;
+  border-top:2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  float: left;
+}
+
+#complaint_header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 10px;
+  position:relative;
+  height:20px;
+  border-bottom: 4px solid;
+  border-bottom-opacity: .5;
+}
+
+.complaint_category {
+  position:relative;
+  height:90px;
+  border-bottom: 3px solid;
+  border-bottom-opacity: .3;
+}
+
+// wrappers
+
+#wrapdiv {
+  width: 800px;
+  float: left;
+  // margin: 0 auto;
+}
+
+#bigwrap {
+  width:2000px;
 }
 
 /* Number styling */
@@ -57,84 +92,22 @@ body {
   font-size: 44px;
   float: right;
 }
+.title {
+  position:relative;
+  width:325px;
+  margin-left:80px;
+  margin-top:-16px;
+}
 .title-small {
   float: right;
   font-size: 11px;
   padding-bottom: 20px;
 }
 
-/* Visualization styling */
-#customer-title {
-  padding-left: 100px;
-}
-#median-title {
-  padding-left: 112px;
-}
-.charts {
-  width: 849px;
-}
-#chart {
-  position: relative;
-  float: right;
-}
-#chart path {
-  stroke: #fff;
-}
-#chart path.highlighted {
-  cursor: pointer;
-}
-.chart {
-  padding-top: 30px;
-  float: right;
-}
-.reset {
-  padding-left: 1em;
-  font-size: 10px;
-  color: #ccc;
-  float: right;
-}
-.background.bar {
-  fill: black;
-}
-.foreground.bar {
-  fill: steelblue;
-}
-.axis path, .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-.axis text {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
-  fill: #6E7B8B;
-}
-.brush rect.extent {
-  fill: steelblue;
-  fill-opacity: .125;
-}
-.brush .resize path {
-  fill: #eee;
-  stroke: #666;
-}
-
 /* Map styling */
-
-.fiberhoods {
-  stroke: black;
-  stroke-width: 1px;
-  transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-}
-
-.fiberhoods path:hover {
-  stroke: black;
-}
 
 #map {
   position: relative;
-  float: right;
   opacity: .4;
+  margin-left:-140px;
 }

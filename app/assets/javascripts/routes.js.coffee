@@ -6,4 +6,3 @@ leg = new Routevision.Models.Leg
 leg.id = 1
 leg.vehicles (vehicles) ->
   window.vehicles = vehicles
-  console.log vehicles.toJSON()
