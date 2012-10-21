@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require d3
+//= require colorbrewer
+//= require line-graph
+//= require Routevision.d3
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/routevision
