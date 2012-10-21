@@ -1,17 +1,37 @@
-[SfTransit::Route, SfTransit::Leg, SfTransit::Stop].each do |model|
-  model.class_eval do
-    def as_json options = {}
-      super(options.merge(:except => [:created_at, :updated_at, :transfer_id]))
+class VehiclesController < ApplicationController
+  def index
+    leg = find_leg params[:leg_id]
+    route = find_route params[:route_id]
+
+    if leg
+
+      return
+    end
+
+    render_json case leg
+    when false
+      nil
+    when nil
+      case route
+      when false
+        nil
+      when nil
+        vehicles
+      else
+        route.vehicles
+      end
+    else
+      leg.vehicles
     end
   end
-end
 
-SfTransit::Route.class_eval do
+  private
+
   def vehicles
     if @vehicles.nil? or Time.now.to_i - @last_vehicle_request > 1.minute
       require 'net/http'
       require 'nokogiri'
-      path = "/service/publicXMLFeed?command=vehicleLocations&a=sf-muni&r=#{self.abbr}"
+      path = "/service/publicXMLFeed?command=vehicleLocations&a=sf-muni"
       req = Net::HTTP::Get.new path
       res = Net::HTTP.start('webservices.nextbus.com', 80) do |http|
         http.request(req)
@@ -25,12 +45,5 @@ SfTransit::Route.class_eval do
       @last_vehicle_request = Time.now.to_i
       @vehicles = vehicles
     end
-    @vehicles
-  end
-end
-
-SfTransit::Leg.class_eval do
-  def vehicles
-    self.route.vehicles.select {|v| v[:dirTag] === self.abbr}
   end
 end
