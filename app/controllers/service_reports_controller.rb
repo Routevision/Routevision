@@ -15,6 +15,7 @@ class ServiceReportsController < ApplicationController
     [:id, :route, :created_at, :updated_at].each do |key|
       params[:service_report].delete key
     end
+		params[:service_report][:axis_type] = 'SfTransit::Leg'
     @service_report.update_attributes params[:service_report]
     render :json => @service_report
   end
