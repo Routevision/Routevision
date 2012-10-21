@@ -1,8 +1,10 @@
 class ServiceReport < ActiveRecord::Base
   attr_accessible :axis, :address, :axis_id, :axis_type, :service_report_category_id, :commendation, :email, :lat, :lng, :prefered_response_method, :report_text, :responded, :response_reply_to, :response_text, :vehicle_id
   attr_accessor :route
-  has_one :service_report_category
+  belongs_to :service_report_category
   belongs_to :axis, :polymorphic => true
+
+  scope :open, where(:responded_to, false)
 
   reverse_geocoded_by :lat, :lng
   before_save do |sr|

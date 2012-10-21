@@ -2,6 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+$service_report_categories = $ '#queue .category'
+$service_report_categories.each ->
+  category = $ this
+  reports = category.find('.report').hide()
+  are_showing = false
+  category.find('h3').bind 'click', ->
+    reports[if are_showing then 'slideUp' else 'slideDown']()
+    are_showing = not are_showing
+
+
 $service_report_form = $ '#new_service_report, .edit_service_report'
 return unless $service_report_form.length
 
@@ -30,13 +40,6 @@ $service_report_form.find('#service_report_route').change ->
   route = $(this).find('option:selected')
   original_axes.find('option.route-'+route.val()).clone().appendTo(select_axis)
 
-
-##################################
-# Update with LatLng Coordinates #
-##################################
-
-
-
 ###################
 # Save the report #
 ###################
@@ -52,9 +55,9 @@ saveServiceReport = ->
         service_report.set
           lat: position.coords.latitude
           lng: position.coords.longitude
-        service_report.save
+        service_report.save {},
           success: ->
-            console.log arguments
+            $service_report_form.html('THANKS!! :D :D :D')
       didntGetLatLng = ->
       navigator.geolocation.getCurrentPosition successfullyGotLatLng, didntGetLatLng
   $.ajax saveRequest

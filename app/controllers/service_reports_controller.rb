@@ -5,6 +5,7 @@ class ServiceReportsController < ApplicationController
     service_report[:axis] = SfTransit::Leg.find params[:service_report][:axis_id]
     service_report[:email] = params[:service_report][:email]
     service_report[:report_text] = params[:service_report][:report_text]
+    service_report[:service_report_category_id] = params[:service_report][:service_report_category_id]
     @service_report.update_attributes service_report
     render :json => @service_report
   end

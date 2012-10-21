@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'bootstrap';
 body, html {
   margin: 0;
   background: #dbdbdb;
@@ -21,6 +22,10 @@ body, html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb134b', endColorstr='#bc0528',GradientType=0 ); /* IE6-9 */
 }
 
+.container {
+  width: 1050px;
+}
+
 #new_service_report, .edit_service_report {
   padding: 10px;
   text-align: center;
@@ -38,5 +43,59 @@ body, html {
 
   input[type=submit] {
     height: 2em;
+  }
+}
+
+#queue {
+  background: #e4e4e4;
+  border-left: 1px solid #969696;
+  min-width: 100%;
+
+ .category {
+    width: 100%;
+    .count {
+      font-size: 15px;
+      color: #C4072E;
+      padding: 3px 8px;
+      border: 1px solid #CCC;
+      @include border-radius(8px);
+    }
+
+    .category-title {
+      @include clearfix;
+      display: block;
+      width: 80%;
+      float: right;
+      margin-right: 15px;
+      position: relative;
+    }
+
+    h3 {
+      padding: 10px;
+      @include clearfix;
+      line-height: 20px;
+      font-size: 16px;
+      word-wrap: break-word;
+      cursor: pointer;
+    }
+
+    .report {
+      padding: 10px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      background: #e3e3e3;
+      position: relative;
+      &:nth-child(2n) {
+        background-color: #b9b9b9;
+        border-top: 1px solid #969696;
+        border-bottom: 1px solid #969696;
+      }
+
+      .time {
+        position: absolute;
+        right: 18px;
+        top: 23px;
+      }
+    }
   }
 }

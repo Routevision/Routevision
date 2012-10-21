@@ -3,17 +3,26 @@
   = image_tag "logo.png"
   %span#title Admin Dashboard
 #content
-  #bigwrap
-    #wrapdiv
-      #graph1.aGraph
-      #customer-title.title Complaints
-      #graph2.aGraph
-      #median-title.title Resolution time
-      #map
-    #queue
-      #complaint_header Categories
-      #q1.complaint_category
-        #route F - Taravel
-      #q2.complaint_category
-      #q3.complaint_category
-      #q4.complaint_category
+  .container#bigwrap
+    .row-fluid
+      .span8
+        #wrapdiv.clearfix
+          #graph1.aGraph
+          #customer-title.title Complaints
+          #graph2.aGraph
+          #median-title.title Resolution time
+          #map
+      .span4
+        #queue.clearfix
+          - @c.each do |cat|
+            .category
+              %h3
+                %span.count= cat.service_reports.count
+                %span.category-title= cat.title
+              - cat.service_reports.each do |sr|
+                .report
+                  %h6.route-title
+                    = sr.axis.route.title
+                  %span.time= sr.created_at.to_s(:short)
+                  %p= sr.report_text
+
