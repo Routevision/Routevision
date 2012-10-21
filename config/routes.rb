@@ -17,8 +17,14 @@ Routevision::Application.routes.draw do
         resources :vehicles
       end
     end
+    resources :service_reports
   end
-  
+
+  resources :vehicles do
+    resources :service_reports
+  end
+
   match :stevens_playground, :to => 'routes#testpage'
-  root :controller => :service_reports, :action => :create, :as => '/service_reports'
+  match '/vehicles/:vehicle_id/service_reports', :controller => :service_reports
+  root :controller => :service_reports, :action => :new, :as => '/service_reports'
 end
