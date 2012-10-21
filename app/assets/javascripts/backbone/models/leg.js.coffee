@@ -6,6 +6,11 @@ class Routevision.Models.Leg extends Backbone.Model
     stops.leg(@id)
     stops.fetch
       complete: => cb.apply(@, [stops]) if typeof cb is 'function'
+  vehicles: (cb) ->
+    vehicles = new Routevision.Collections.VehiclesCollection
+    vehicles.leg @id
+    vehicles.fetch
+      success: -> cb.apply(@, [vehicles]) if typeof cb is 'function'
 
   # defaults:
 
