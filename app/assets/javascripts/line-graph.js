@@ -1,4 +1,3 @@
-
 /**
  * Create and draw a new line-graph.
  * 
@@ -203,9 +202,9 @@ function LineGraph(argsMap) {
 		
 		// margins with defaults (do this before processDataMap since it can modify the margins)
 		margin[0] = getOptionalVar(argsMap, 'marginTop', 20) // marginTop allows fitting the actions, date and top of axis labels
-		margin[1] = getOptionalVar(argsMap, 'marginRight', 6)
-		margin[2] = getOptionalVar(argsMap, 'marginBottom', 15) // marginBottom allows fitting the legend along the bottom
-		margin[3] = getOptionalVar(argsMap, 'marginLeft', 6) // marginLeft allows fitting the axis labels
+		margin[1] = getOptionalVar(argsMap, 'marginRight', 20)
+		margin[2] = getOptionalVar(argsMap, 'marginBottom', 35) // marginBottom allows fitting the legend along the bottom
+		margin[3] = getOptionalVar(argsMap, 'marginLeft', 90) // marginLeft allows fitting the axis labels
 		
 		// assign instance vars from dataMap
 		data = processDataMap(getRequiredVar(argsMap, 'data'));
@@ -463,11 +462,11 @@ function LineGraph(argsMap) {
 	var initX = function() {
 		// X scale starts at epoch time 1335035400000, ends at 1335294600000 with 300s increments
 		x = d3.time.scale().domain([data.startTime, data.endTime]).range([0, w]);
+		
 		// create yAxis (with ticks)
-		// xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(1);
+		xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(1);
 			// without ticks
-			xAxis = d3.svg.axis().scale(x).
-			ticks(3);	//hack
+			//xAxis = d3.svg.axis().scale(x);
 	}
 
 	/**
@@ -482,8 +481,8 @@ function LineGraph(argsMap) {
 				.attr("class", "line-graph")
 				.attr("width", w + margin[1] + margin[3])
 				.attr("height", h + margin[0] + margin[2])	
-				.append("svg:g");
-					// .attr("transform", "translate(" + margin[3] + "," + margin[0] + ")");
+				.append("svg:g")
+					.attr("transform", "translate(" + margin[3] + "," + margin[0] + ")");
 
 		initX()		
 		
@@ -498,11 +497,10 @@ function LineGraph(argsMap) {
 		initY();
 				
 		// Add the y-axis to the left
-		// graph.append("svg:g")
-		// 	.attr("class", "y axis left")
-		// 	.attr("transform", "translate(-10,0)")
-		// 	.call(yAxisLeft);
-		//hack
+		graph.append("svg:g")
+			.attr("class", "y axis left")
+			.attr("transform", "translate(-10,0)")
+			.call(yAxisLeft);
 			
 		if(yAxisRight != undefined) {
 			// Add the y-axis to the right if we need one
@@ -568,13 +566,12 @@ function LineGraph(argsMap) {
 				//debug("Line Y => data: " + d + " scale: " + _y)
 				// return the Y coordinate where we want to plot this datapoint
 				return _y;
+			})
+			.defined(function(d) {
+				// handle missing data gracefully
+				// feature added in https://github.com/mbostock/d3/pull/594
+				return d >= 0;
 			});
-// hack
-			// .defined(function(d) {
-			// 	// handle missing data gracefully
-			// 	// feature added in https://github.com/mbostock/d3/pull/594
-			// 	return d >= 0;
-			// });
 
 		// append a group to contain all lines
 		lines = graph.append("svg:g")
@@ -639,7 +636,7 @@ function LineGraph(argsMap) {
 		// hide it by default
 		hoverLine.classed("hide", true);
 			
-		// createScaleButtons();	hack
+		createScaleButtons();
 		createDateLabel();
 		createLegend();		
 		setValueLabelsToLatest();
@@ -814,7 +811,7 @@ function LineGraph(argsMap) {
 		var mouseX = event.pageX-hoverLineXOffset;
 		var mouseY = event.pageY-hoverLineYOffset;
 		
-		// debug("MouseOver graph [" + containerId + "] => x: " + mouseX + " y: " + mouseY + "  height: " + h + " event.clientY: " + event.clientY + " offsetY: " + event.offsetY + " pageY: " + event.pageY + " YOffset: " + hoverLineYOffset + " XOffset: " + hoverLineXOffset)
+		//debug("MouseOver graph [" + containerId + "] => x: " + mouseX + " y: " + mouseY + "  height: " + h + " event.clientY: " + event.clientY + " offsetY: " + event.offsetY + " pageY: " + event.pageY + " hoverLineYOffset: " + hoverLineYOffset)
 		if(mouseX >= 0 && mouseX <= w && mouseY >= 0 && mouseY <= h) {
 			// show the hover line
 			hoverLine.classed("hide", false);
@@ -847,7 +844,7 @@ function LineGraph(argsMap) {
 		currentUserPositionX = -1;
 	}
 	
-  // if we need to support older browsers without pageX/pageY we can use this
+/*  // if we need to support older browsers without pageX/pageY we can use this
 	var getMousePositionFromEvent = function(e, element) {
 		var posx = 0;
 		var posy = 0;
@@ -865,7 +862,7 @@ function LineGraph(argsMap) {
 		
 		return {x: posx, y: posy};
 	}
-
+*/
 	
 	/*
 	* Handler for when data is updated.
@@ -1057,8 +1054,8 @@ function LineGraph(argsMap) {
 		h = $("#" + containerId).height() - margin[0] - margin[2]; // height
 		
 		// make sure to use offset() and not position() as we want it relative to the document, not its parent
-		hoverLineXOffset = $("#graph1").offset().left-51.3*margin[3]; // hack
-		hoverLineYOffset = 1.2*margin[0]+$(container).offset().top;
+		hoverLineXOffset = margin[3]+$(container).offset().left;
+		hoverLineYOffset = margin[0]+$(container).offset().top;
 	}
 	
 	/**

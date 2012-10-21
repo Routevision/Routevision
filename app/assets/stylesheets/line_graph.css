@@ -58,9 +58,8 @@ svg.line-graph .date-label {
 
 .aGraph {
 	position:relative;
-	width:325px;
+	width:625px;
 	height:100px;
-	float:right;
 	padding-left: 10px;
 	padding-top: 25px;
 }
