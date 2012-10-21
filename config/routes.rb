@@ -18,6 +18,7 @@ Routevision::Application.routes.draw do
       end
     end
   end
-
-  root :to => 'routes#testpage'
+  
+  match :stevens_playground, :to => 'routes#testpage'
+  root :controller => :service_reports, :action => :create, :as => '/service_reports'
 end
