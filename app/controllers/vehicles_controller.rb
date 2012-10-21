@@ -3,11 +3,6 @@ class VehiclesController < ApplicationController
     leg = find_leg params[:leg_id]
     route = find_route params[:route_id]
 
-    if leg
-
-      return
-    end
-
     render_json case leg
     when false
       nil
