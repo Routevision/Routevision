@@ -1,0 +1,2 @@
+class ServiceReportsController < ApplicationController
+end
