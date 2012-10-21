@@ -1,4 +1,4 @@
-[SfTransit::Route, SfTransit::Leg, SfTransit::Stop].each do |model|
+[SfTransit::Stop].each do |model|
   model.class_eval do
     def as_json options = {}
       super(options.merge(:except => [:created_at, :updated_at, :transfer_id]))
@@ -7,6 +7,10 @@
 end
 
 SfTransit::Route.class_eval do
+  def as_json options = {}
+    super(options.merge(:except => [:created_at, :updated_at, :transfer_id]))
+  end
+
   def vehicles
     if @vehicles.nil? or Time.now.to_i - @last_vehicle_request > 1.minute
       require 'net/http'
@@ -30,6 +34,10 @@ SfTransit::Route.class_eval do
 end
 
 SfTransit::Leg.class_eval do
+  def as_json options = {}
+    super(options.merge(:except => [:created_at, :updated_at, :transfer_id]))
+  end
+    
   def vehicles
     self.route.vehicles.select {|v| v[:dirTag] === self.abbr}
   end
