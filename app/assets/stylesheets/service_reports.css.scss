@@ -25,7 +25,14 @@ body, html {
 .container {
   width: 1220px;
   background: white;
+  height: 910px;
+  overflow: hidden;
+  margin-top: 15px;
+  @include border-radius(2px);
+  @include box-shadow(0 0 8px -1px #333);
 }
+
+
 
 #map-container {
   margin-top: 40px;
@@ -55,6 +62,7 @@ body, html {
   background: #e4e4e4;
   border-left: 1px solid #969696;
   min-width: 100%;
+  min-height: 950px;
 
  .category {
     width: 100%;
