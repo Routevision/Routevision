@@ -15,13 +15,14 @@
       .span4
         #queue.clearfix
           - @c.each do |cat|
-            .category
+            %div{:class => "category category-id-#{cat.id}"}
               %h3
                 %span.count= cat.service_reports.count
                 %span.category-title= cat.title
-              - cat.service_reports.each do |sr|
-                .report
-                  %h6.route-title
-                    = sr.axis.route.title
-                  %span.time= sr.created_at.to_s(:short)
-                  %p= sr.report_text
+              .reports
+                - cat.service_reports.each do |sr|
+                  %div{:class => "report report-id-#{sr.id}"}
+                    %h6.route-title
+                      = sr.axis.route.title
+                    %span.time= sr.created_at.to_s(:short)
+                    %p= sr.report_text

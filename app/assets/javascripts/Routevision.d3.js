@@ -51,8 +51,9 @@ d3.json("/assets/sf_dcp.geojson", function(json) {
 
 });
 
-plot_vehicles();
+_.delay(plot_vehicles, 0)
 setInterval(plot_vehicles, (10 * 1000));
+
 
 function plot_vehicles() {
     console.log("plotting vehicles");
@@ -64,8 +65,8 @@ function plot_vehicles() {
     d3.json("/api/service_reports", function(json) {
         window.j = json;
         json.forEach( function (report) {
-            console.log(report);
             // cells.selectAll("circle")[0][id_mapper.indexOf(String(6404))].style.fill="red";
+            window.appendReport(report);
             try {
                 cells.selectAll("circle")[0][id_mapper.indexOf(String(report.vehicle_id))].style.fill="red";
                 cells.selectAll("circle")[0][id_mapper.indexOf(String(report.vehicle_id))].setAttribute("r",7);
