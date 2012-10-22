@@ -15,6 +15,7 @@ class ServiceReport < ActiveRecord::Base
   ROUTE_OPTIONS = { :collection => SfTransit::Route.all.collect {|r| [r.title, r.id]}, :prompt => 'Select Route'}
   AXIS_ID_OPTIONS = { :collection => SfTransit::Leg.all.map {|l| [l.title, {'data-value'.to_sym => l.id, :class => "route-#{l.route.id}"}]}, :prompt => 'Select Direction', :as => :select }
   SERVICE_REPORT_CATEGORY_ID_OPTIONS = { :collection => ServiceReportCategory.all.collect {|src| [src.title, src.id]}, :as => :select, :prompt => 'Select Category'}
+	REPORT_TEXT_OPTIONS = { :input_html => { :rows => 5 }}
 
   def options_for(field)
     const = "#{field.upcase}_OPTIONS"
