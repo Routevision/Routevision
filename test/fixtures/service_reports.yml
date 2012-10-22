@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lat: 9.99
+  lng: 9.99
+  address: MyString
+  email: MyString
+  prefered_response_method: MyString
+  category: 
+  commendation: false
+  axis_id: 1
+  axis_type: MyString
+  vehicle_id: 1
+  responded: false
+  response_text: MyString
+  response_reply_to: MyString
+
+two:
+  lat: 9.99
+  lng: 9.99
+  address: MyString
+  email: MyString
+  prefered_response_method: MyString
+  category: 
+  commendation: false
+  axis_id: 1
+  axis_type: MyString
+  vehicle_id: 1
+  responded: false
+  response_text: MyString
+  response_reply_to: MyString

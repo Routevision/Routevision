@@ -1,0 +1,114 @@
+// Place all the styles related to the ServiceReports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap';
+body, html {
+  margin: 0;
+  background: #dbdbdb;
+}
+
+#header {
+  border-bottom: 3px solid #570d0d;
+  padding: 8px 0 0;
+  text-align: center;
+  background: #eb134b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #eb134b 0%, #bc0528 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb134b), color-stop(100%,#bc0528)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #eb134b 0%,#bc0528 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #eb134b 0%,#bc0528 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb134b', endColorstr='#bc0528',GradientType=0 ); /* IE6-9 */
+}
+
+.container {
+  width: 1220px;
+  background: white;
+  height: 910px;
+  overflow: hidden;
+  margin-top: 15px;
+  @include border-radius(2px);
+  @include box-shadow(0 0 8px -1px #333);
+}
+
+
+
+#map-container {
+  margin-top: 40px;
+}
+
+#new_service_report, .edit_service_report {
+  padding: 10px;
+  text-align: center;
+
+  select {
+    font-size: 20px;
+  }
+
+  select, input, textarea {
+    padding: 1%;
+    width: 98%;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  input[type=submit] {
+    height: 2em;
+  }
+}
+
+#queue {
+  background: #e4e4e4;
+  border-left: 1px solid #969696;
+  min-width: 100%;
+  min-height: 950px;
+
+ .category {
+    width: 100%;
+    .count {
+      font-size: 15px;
+      color: #C4072E;
+      padding: 3px 8px;
+      border: 1px solid #CCC;
+      @include border-radius(8px);
+    }
+
+    .category-title {
+      @include clearfix;
+      display: block;
+      width: 80%;
+      float: right;
+      margin-right: 15px;
+      position: relative;
+    }
+
+    h3 {
+      padding: 10px;
+      @include clearfix;
+      line-height: 20px;
+      font-size: 16px;
+      word-wrap: break-word;
+      cursor: pointer;
+    }
+
+    .report {
+      padding: 10px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      background: #e3e3e3;
+      position: relative;
+      &:nth-child(2n) {
+        background-color: #b9b9b9;
+        border-top: 1px solid #969696;
+        border-bottom: 1px solid #969696;
+      }
+
+      .time {
+        position: absolute;
+        right: 18px;
+        top: 23px;
+      }
+    }
+  }
+}

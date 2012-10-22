@@ -11,4 +11,14 @@ class RoutesController < ApplicationController
       render :json => route
     end
   end
+
+  def qr_code
+
+  end
+
+  def testpage
+    sr = ServiceReport
+    @c = ServiceReportCategory.all
+  end
+
 end

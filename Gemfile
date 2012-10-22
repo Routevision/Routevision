@@ -11,6 +11,7 @@ gem 'sf_transit', :git => 'git@github.com:benastan/sftransit.git'
 gem 'next_muni', :git => 'git@github.com:benastan/next_muni_gem.git'
 gem 'better_bart', :git => 'git@github.com:benastan/better_bart.git'
 gem 'haml'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +20,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass'
   gem 'rails-backbone'
+  gem 'd3-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

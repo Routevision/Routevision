@@ -1,0 +1,2051 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"service_re",
+				"service_report_categories"
+			],
+			[
+				"service",
+				"service_report_form"
+			],
+			[
+				"service_report",
+				"service_report_form"
+			],
+			[
+				"serv",
+				"service_report_form"
+			],
+			[
+				"Route",
+				"Routevision"
+			],
+			[
+				"find_or_initia",
+				"find_or_initialize_by_abbr_and_title"
+			],
+			[
+				"find_o",
+				"find_or_initialize_by_abbr_and_title"
+			],
+			[
+				"ana",
+				"analogue_routes"
+			],
+			[
+				"imagita",
+				"imagitasChecklistPage"
+			],
+			[
+				"additional",
+				"additionalCurlOpts"
+			],
+			[
+				"howItwork",
+				"howItworks"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\nrails g model ServiceReport lat:decimal lng:decimal address:string email:string prefered_response_method:string category:category_id commendation:boolean axis_id:integer axis_type:string vehicle_id:integer responded:boolean response_text:string response_reply_to:string\n\nServiceReport\n\nlat:decimal\nlng:decimal\naddress:string\nemail:string\nprefered_response_method:string\ncategory:category_id\ncommendation:boolean\naxis_id:integer\naxis_type:string\nvehicle_id:integer\nresponded:boolean\nresponse_text:string\nresponse_reply_to:stringk\n\nrails g model ServiceReportCategory category_id:integer title:string description:string\n\nServiceReportSubCategory\ncategory_id:integer\ncode:integer\ntitle:string\ndesecription:string",
+			"settings":
+			{
+				"buffer_size": 710,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/assets/javascripts/routes.js.coffee",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/views/routes/map.html.haml",
+			"settings":
+			{
+				"buffer_size": 47,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class Routevision.Models.Vehicle extends Backbone.Model\n  paramRoot: 'vehicle'\n  urlRoot: '/api/vehicles'\n\n  # defaults:\n\nclass Routevision.Collections.VehiclesCollection extends Backbone.Collection\n  model: Routevision.Models.Vehicle\n  url: '/api/vehicles'\n  leg: (leg_id) -> @url = '/api/legs/'+leg_id+'/vehicles'\n  route: (route_id) -> @url = '/api/routes/'+route_id+'/vehicles'\n",
+			"file": "/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/vehicle.js.coffee",
+			"file_size": 393,
+			"file_write_time": 1350787811000000,
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1090,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/models/service_report.rb",
+			"settings":
+			{
+				"buffer_size": 1750,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/db/migrate/20121021172038_create_service_reports.rb",
+			"settings":
+			{
+				"buffer_size": 518,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/config/initializers/sf_transit.rb",
+			"settings":
+			{
+				"buffer_size": 1261,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/controllers/service_reports_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1280,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Vehicle\nvehicle_code:integer\n",
+			"settings":
+			{
+				"buffer_size": 29,
+				"line_ending": "Unix",
+				"name": "Vehicle"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/Gemfile",
+			"settings":
+			{
+				"buffer_size": 1071,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/db/migrate/20121021174400_add_report_text_to_service_report.rb",
+			"settings":
+			{
+				"buffer_size": 139,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/db/migrate/20121021180731_change_report_text_to_text.rb",
+			"settings":
+			{
+				"buffer_size": 134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/assets/javascripts/service_reports.js.coffee",
+			"settings":
+			{
+				"buffer_size": 2232,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/service_report.js.coffee",
+			"settings":
+			{
+				"buffer_size": 297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/views/service_reports/new.html.haml",
+			"settings":
+			{
+				"buffer_size": 222,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/controllers/routes_controller.rb",
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "service_reports.css.scss",
+			"settings":
+			{
+				"buffer_size": 2611,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "1535\n8141\n1807",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix",
+				"name": "1535"
+			}
+		},
+		{
+			"file": "vis.css.scss",
+			"settings":
+			{
+				"buffer_size": 1610,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 236,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Downloads/ravel-landing/app/views/layouts/application.html.haml",
+			"settings":
+			{
+				"buffer_size": 464,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/db/seeds.rb",
+			"settings":
+			{
+				"buffer_size": 1200,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/models/service_report_category.rb",
+			"settings":
+			{
+				"buffer_size": 141,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/config/environment.rb",
+			"settings":
+			{
+				"buffer_size": 196,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/assets/javascripts/Routevision.d3.js",
+			"settings":
+			{
+				"buffer_size": 4632,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/views/service_reports/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ben/Development/Routevision/app/views/routes/testpage.html.haml",
+			"settings":
+			{
+				"buffer_size": 844,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				":0",
+				":0 - BOF"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set python",
+				"Set Syntax: Python"
+			],
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"set bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"set sca",
+				"Set Syntax: Scala"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				":we",
+				":w - Save"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"align",
+				"Preferences: Alignment Key Bindings – User"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pplu",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"HTML",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 136.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ben/Development/Routevision/app/views/routes/testpage.html.haml",
+		"/Users/ben/Development/Routevision/app/views/service_reports/index.html.haml",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/templates/test.jst.rhtml",
+		"/Users/ben/Development/Routevision/app/models/service_report_category.rb",
+		"/Users/ben/Development/Routevision/app/views/service_reports/new.html.haml",
+		"/Users/ben/Development/Routevision/db/migrate/20121021174400_add_report_text_to_service_report.rb",
+		"/Users/ben/Development/Routevision/app/controllers/stops_controller.rb",
+		"/Users/ben/Development/Routevision/config/database.yml",
+		"/Users/ben/Development/Routevision/app/helpers/legs_helper.rb",
+		"/Users/ben/Development/Routevision/app/controllers/leg_stops_controller.rb",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/stop.js.coffee",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/leg_stop.js.coffee",
+		"/Users/ben/Development/Routevision/config/routes.rb",
+		"/Users/ben/Development/Routevision/app/controllers/application_controller.rb",
+		"/Users/ben/Development/Routevision/app/controllers/vehicles_controller.rb",
+		"/Users/ben/Development/Routevision/config/initializers/sf_transit.rb",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/leg.js.coffee",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/route.js.coffee",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/routes.js.coffee",
+		"/Users/ben/Development/Routevision/app/controllers/routes_controller.rb",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/vehicle.js.coffee",
+		"/Users/ben/Development/Routevision/app/controllers/legs_controller.rb",
+		"/Users/ben/Development/Routevision/app/assets/javascripts/leg_stops.js.coffee",
+		"/Users/ben/Development/Routevision/Gemfile",
+		"/Users/ben/Development/SFTransit/db/migrate/20121019174652_add_direction_to_leg.rb",
+		"/Users/ben/Development/SFTransit/test/dummy/db/migrate/20121019172812_add_direction_to_leg.rb",
+		"/Users/ben/Development/SFTransit/app/models/sf_transit/agency_name.rb",
+		"/Users/ben/Development/SFTransit/app/models/sf_transit/sf_transit/agency.rb",
+		"/Users/ben/Development/SFTransit/Gemfile",
+		"/Users/ben/Development/SFTransit/sf_transit.gemspec",
+		"/Users/ben/Development/SFTransit/config/routes.rb",
+		"/Users/ben/Development/SFTransit/db/migrate/20121009035423_create_stops.rb",
+		"/Users/ben/Development/SFTransit/db/migrate/20121009035404_create_leg_stops.rb",
+		"/Users/ben/Development/SFTransit/db/migrate/20121009031452_create_leg_junctions.rb",
+		"/Users/ben/Development/SFTransit/db/migrate/20121009025530_create_routes.rb",
+		"/Users/ben/Development/SFTransit/db/migrate/20121008002646_create_junctions.rb",
+		"/Users/ben/Development/sftransit-rails/app/controllers/application_controller.rb",
+		"/Users/ben/Development/sftransit-rails/app/models/stop.rb",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/jquery/node_modules/grunt/node_modules/connect/node_modules/debug/debug.js",
+		"/Users/ben/Development/sftransit-rails/db/migrate/20121009035423_create_stops.rb",
+		"/Users/ben/Development/sftransit-rails/lib/tasks/update_muni.rake",
+		"/Users/ben/Development/sftransit-rails/app/models/leg.rb",
+		"/Users/ben/Development/sftransit-rails/db/migrate/20121008002646_create_junctions.rb",
+		"/Users/ben/Development/sftransit-rails/db/migrate/20121009031452_create_leg_junctions.rb",
+		"/Users/ben/Development/sftransit-rails/app/models/route_junction.rb",
+		"/Users/ben/Development/sftransit-rails/db/migrate/20121009025530_create_routes.rb",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/jquery/node_modules/grunt/node_modules/uglify-js/test/unit/compress/expected/forstatement.js",
+		"/Users/ben/Development/sftransit-rails/config/application.rb",
+		"/Users/ben/Documents/passwd",
+		"/Users/ben/Dropbox/Development/node-orm/Cakefile",
+		"/Users/ben/forge-workspace/muni-app-1/src/js/application.js",
+		"/Users/ben/forge-workspace/muni-app-1/src/js/applications.js",
+		"/Users/ben/forge-workspace/muni-app-1/src/package.json",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/jquery/grunt.js",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/jquery/node_modules/grunt-compare-size/grunt.js",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/jquery/dist/jquery.min.js",
+		"/Users/ben/forge-workspace/muni-app-1/src/config.json",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/bootstrap/docs/assets/js/bootstrap.js",
+		"/Users/ben/Development/sftransit-rails/config.ru",
+		"/Users/ben/Development/sftransit-rails/config/environments/development.rb",
+		"/Users/ben/Development/sftransit-rails/Rakefile",
+		"/Users/ben/Development/sftransit-rails/script/rails",
+		"/Users/ben/Development/sftransit-rails/app/models/junction.rb",
+		"/Users/ben/Development/sftransit-rails/config/routes.rb",
+		"/Users/ben/Development/sftransit-rails/test/fixtures/junctions.yml",
+		"/Users/ben/Development/sftransit-rails/Gemfile",
+		"/Users/ben/forge-workspace/muni-app-1/src/index.html",
+		"/Users/ben/forge-workspace/muni-app-1/src/css/main.css",
+		"/Users/ben/forge-workspace/muni-app-1/src/node_modules/bootstrap/less/mixins.less",
+		"/Users/ben/forge-workspace/muni-app-1/src/jekyll/config.yml",
+		"/Users/ben/Dropbox/DMV (1)/import.php",
+		"/Users/ben/Dropbox/DMV (1)/import.sh",
+		"/Users/ben/Documents/e",
+		"/Users/ben/Dropbox/DMV (1)/test2.sql",
+		"/Users/ben/Dropbox/DMV (1)/data.sql",
+		"/Users/ben/Dropbox/DMV (1)/test.sql",
+		"/Users/ben/Development/updtr/src/main/webapp/scripts/templates/checklist-templates.txt",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/lib/db.php",
+		"/Users/ben/Development/updtr/src/main/webapp/scripts/common.js",
+		"/Users/ben/Development/updtr/src/main/webapp/imagitas/move_info.html",
+		"/Users/ben/Development/updtr/src/main/webapp/css/updateManager.css",
+		"/Users/ben/Development/updtr/src/main/webapp/imagitas/block_unwanted_mail.html",
+		"/Users/ben/Development/updtr/src/main/webapp/moving-page.html",
+		"/Users/ben/Development/updtr/src/main/webapp/css/updater-main.css",
+		"/Users/ben/Development/updtr/src/main/webapp/imagitas/update_friends.html",
+		"/Users/ben/Development/updtr/src/main/webapp/css/imagitas-main.css",
+		"/Users/ben/Development/updtr/src/main/webapp/scripts/underscore-min.js",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/tpl/checklistItemRelatedContentTable.tpl.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/checklistitemrelatedcontent.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/scripts/checklistitemrelatedcontent.js",
+		"/Users/ben/Development/updtr/src/main/webapp/scripts/markdown.js",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/tpl/checklistItemRelatedContentBody.tpl.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/tpl/checklistItemRelatedContentTableRow.tpl.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/lib/auth.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/lib/init.php",
+		"/Users/ben/Development/updtr/src/main/webapp/admin/checklist/login.php",
+		"/Users/ben/Development/updtr/src/main/webapp/scripts/hinter.js",
+		"/Users/ben/Development/updtr/src/main/webapp/internal/notifications/invoiceBody.html",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/static/js/home.js",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/goalsnap_web/static/css/home.less",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/goalsnap_web/static/css/common.less",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/goalsnap_web/static/css/home.css",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/static/css/home.css",
+		"/Users/ben/Development/Personal/Tests/Codecademy Project/codeacademy_dashboard/dash/views.py",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/goalsnap_web/templates/home.html",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/goalsnap_web/templates/footer.html",
+		"/Users/ben/Development/Personal/Projects/In Progress/GoalSnap/GoalSnap/settings.py",
+		"/Users/ben/Dropbox/Documents/Blog/Drafts.md",
+		"/Users/ben/Dropbox/Documents/Blog/Serious Optimization Techniques.md",
+		"/Users/ben/Development/Personal/Projects/In Progress/css_audit/static/css/base.less",
+		"/Users/ben/Development/Personal/Tests/test",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/examples/media/js/Zoomz.coffee",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/examples/media/js/Zoomz.js",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/src/Zoomz.js",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/build/build.coffee",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/build/build.js",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/build/build.coffee.js",
+		"/Users/ben/Development/Personal/Projects/Shipped/Zoomz.js/build/build.c.js",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/models.py",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/views.py",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/api/handlers.py",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/static/css/base.less",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/templates/base.haml",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/static/js/router.coffee",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/static/js/base.coffee",
+		"/Users/ben/Development/Personal/Tests/css_audit/audit/static/js/architecture.coffee",
+		"/Users/ben/Development/Personal/Tests/httptests/auth_rsp.php",
+		"/Users/ben/Development/Personal/Tests/httptests/HTTPRequest/src/HTTPRequest.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"title",
+			"median",
+			"map",
+			": ",
+			"2000px",
+			") ",
+			"r",
+			"if",
+			"username: Routevision",
+			"=>",
+			"SFTransit",
+			"SfTransit",
+			"Frame",
+			"\n  ",
+			"Smiley",
+			"SmileyMarker",
+			"initialize",
+			"make",
+			"3000",
+			"gradient",
+			"mysql_real",
+			"toggle",
+			"isPaused",
+			"togglePa",
+			"playPauseBtn",
+			"pause",
+			"update",
+			"var_d",
+			"validate",
+			"showSignupForm",
+			"hint",
+			"addressform",
+			"address",
+			"address for",
+			"h3",
+			"select",
+			"selec",
+			"checkboxWrap",
+			"orderSelect",
+			"collapse",
+			"sendShare",
+			"newUpdate",
+			"searchInterface",
+			"label",
+			"input",
+			"body",
+			"\n#",
+			"editBt",
+			"collapse",
+			"expand",
+			"isImagitasPage",
+			"Views.ChecklistItem",
+			"ChecklistItem",
+			"imagitas",
+			"Views.ChecklistItem",
+			"ChecklistItem",
+			"empty",
+			"Zippy",
+			"Views.Org",
+			"Org",
+			"itemsList",
+			"itemList",
+			"Updtr.Collections",
+			"StateOrg",
+			"State",
+			"behavior",
+			"console",
+			"this.renderItems",
+			"behavior",
+			"Updtr.Collections.StateOrganizations",
+			"inOrOutOf",
+			"Updtr.Views.Organization",
+			"behavior",
+			"sendShareMail",
+			"sendShare",
+			"footerLogo",
+			"\n					",
+			"origin",
+			"moving page",
+			"this is the imagitas",
+			"this is the",
+			"this",
+			"imagitas",
+			"#yourNewAddress #move-ma",
+			"#yourNew",
+			"templates",
+			"porn",
+			"finder",
+			"compress",
+			".",
+			"STATIC",
+			"template",
+			"GoalSnap",
+			"return",
+			"addProject",
+			"console",
+			"': '/",
+			"additionalCSS",
+			"getSheets",
+			"console",
+			"url",
+			"getSheets",
+			"projecthandler",
+			"console",
+			"exit",
+			"echo",
+			"var_dump",
+			"basicAuth",
+			"useBasic",
+			"cookie",
+			"console",
+			"set",
+			"CSSAudit",
+			"filter",
+			"settings",
+			"CSSAudit.user",
+			"sheet",
+			"Path",
+			"console",
+			"BaseDash",
+			"Path.coll",
+			"collection",
+			"Path.collection",
+			"Paths.collection",
+			"model:",
+			"CSSAudit",
+			"session",
+			"address"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"username: postgres",
+			":",
+			"SfTransit",
+			"goalsnap",
+			"Audit",
+			"",
+			"common.png",
+			"}}",
+			"{{",
+			"",
+			"|",
+			"]],\n[[",
+			"]],\n[[\n",
+			"\n",
+			"|",
+			"||",
+			"scripts/",
+			"",
+			", ",
+			"&quot;",
+			"</p><p>",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 19,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								618
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/ben/Development/Routevision/app/assets/javascripts/routes.js.coffee",
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								230,
+								230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/ben/Development/Routevision/app/views/routes/map.html.haml",
+					"settings":
+					{
+						"buffer_size": 47,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/vehicle.js.coffee",
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/ben/Development/Routevision/config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								914,
+								914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/ben/Development/Routevision/app/models/service_report.rb",
+					"settings":
+					{
+						"buffer_size": 1750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/ben/Development/Routevision/db/migrate/20121021172038_create_service_reports.rb",
+					"settings":
+					{
+						"buffer_size": 518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/ben/Development/Routevision/config/initializers/sf_transit.rb",
+					"settings":
+					{
+						"buffer_size": 1261,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1053,
+								1053
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/ben/Development/Routevision/app/controllers/service_reports_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1105,
+								1105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Vehicle",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/ben/Development/Routevision/Gemfile",
+					"settings":
+					{
+						"buffer_size": 1071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/ben/Development/Routevision/db/migrate/20121021174400_add_report_text_to_service_report.rb",
+					"settings":
+					{
+						"buffer_size": 139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/ben/Development/Routevision/db/migrate/20121021180731_change_report_text_to_text.rb",
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								130,
+								130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/ben/Development/Routevision/app/assets/javascripts/service_reports.js.coffee",
+					"settings":
+					{
+						"buffer_size": 2232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/Users/ben/Development/Routevision/app/assets/javascripts/backbone/models/service_report.js.coffee",
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/Users/ben/Development/Routevision/app/views/service_reports/new.html.haml",
+					"settings":
+					{
+						"buffer_size": 222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/Users/ben/Development/Routevision/app/controllers/routes_controller.rb",
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "service_reports.css.scss",
+					"settings":
+					{
+						"buffer_size": 2611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1246,
+								1246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								9
+							]
+						],
+						"settings":
+						{
+							"auto_name": "1535",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "vis.css.scss",
+					"settings":
+					{
+						"buffer_size": 1610,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "/Users/ben/Development/Routevision/app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "/Users/ben/Downloads/ravel-landing/app/views/layouts/application.html.haml",
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "/Users/ben/Development/Routevision/db/seeds.rb",
+					"settings":
+					{
+						"buffer_size": 1200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "/Users/ben/Development/Routevision/app/models/service_report_category.rb",
+					"settings":
+					{
+						"buffer_size": 141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "/Users/ben/Development/Routevision/config/environment.rb",
+					"settings":
+					{
+						"buffer_size": 196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "/Users/ben/Development/Routevision/app/assets/javascripts/Routevision.d3.js",
+					"settings":
+					{
+						"buffer_size": 4632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4632,
+								4632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1383.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "/Users/ben/Development/Routevision/app/views/service_reports/index.html.haml",
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "/Users/ben/Development/Routevision/app/views/routes/testpage.html.haml",
+					"settings":
+					{
+						"buffer_size": 844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"app/assets/stylesheets/service_reports.css.scss"
+			],
+			[
+				"viscss",
+				"app/assets/stylesheets/vis.css.scss"
+			],
+			[
+				"vis",
+				"app/views/routes/testpage.html.haml"
+			],
+			[
+				"servss",
+				"app/assets/stylesheets/service_reports.css.scss"
+			],
+			[
+				"vis.css",
+				"app/assets/stylesheets/vis.css.scss"
+			],
+			[
+				"html",
+				"app/views/service_reports/index.html.haml"
+			],
+			[
+				"routescont",
+				"app/controllers/routes_controller.rb"
+			],
+			[
+				"servicecont",
+				"app/controllers/service_reports_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"index",
+				"app/views/service_reports/index.html.haml"
+			],
+			[
+				"test",
+				"app/views/routes/testpage.html.haml"
+			],
+			[
+				"visjs",
+				"app/assets/javascripts/Routevision.d3.js"
+			],
+			[
+				"servicerepjs",
+				"app/assets/javascripts/service_reports.js.coffee"
+			],
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"envir",
+				"config/environment.rb"
+			],
+			[
+				"servicecss",
+				"app/assets/stylesheets/service_reports.css.scss"
+			],
+			[
+				"service",
+				"app/models/service_report.rb"
+			],
+			[
+				"servicecate",
+				"app/models/service_report_category.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"sercat",
+				"app/models/service_report_category.rb"
+			],
+			[
+				"testpage",
+				"app/views/routes/testpage.html.haml"
+			],
+			[
+				"js",
+				"app/assets/javascripts/service_reports.js.coffee"
+			],
+			[
+				"servicecateg",
+				"app/models/service_report_category.rb"
+			],
+			[
+				"servicereports",
+				"app/controllers/service_reports_controller.rb"
+			],
+			[
+				"la",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"new",
+				"app/views/service_reports/new.html.haml"
+			],
+			[
+				"servjs",
+				"app/assets/javascripts/service_reports.js.coffee"
+			],
+			[
+				"servicerepcss",
+				"app/assets/stylesheets/service_reports.css.scss"
+			],
+			[
+				"routecont",
+				"app/controllers/routes_controller.rb"
+			],
+			[
+				"servicejs",
+				"app/assets/javascripts/backbone/models/service_report.js.coffee"
+			],
+			[
+				"servicecontr",
+				"app/controllers/service_reports_controller.rb"
+			],
+			[
+				"servicero",
+				"app/models/service_report.rb"
+			],
+			[
+				"create",
+				"app/views/service_reports/create.html.haml"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"servicereporjs",
+				"app/assets/javascripts/service_reports.js.coffee"
+			],
+			[
+				"change",
+				"db/migrate/20121021180731_change_report_text_to_text.rb"
+			],
+			[
+				"add",
+				"db/migrate/20121021174400_add_report_text_to_service_report.rb"
+			],
+			[
+				"addre",
+				"db/migrate/20121021174400_add_report_text_to_service_report.rb"
+			],
+			[
+				"src",
+				"app/models/service_report_category.rb"
+			],
+			[
+				"servicerep",
+				"app/models/service_report.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"servicereportscont",
+				"app/controllers/service_reports_controller.rb"
+			],
+			[
+				"sf_tra",
+				"config/initializers/sf_transit.rb"
+			],
+			[
+				"servicereportcate",
+				"app/models/service_report_category.rb"
+			],
+			[
+				"createser",
+				"db/migrate/20121021172038_create_service_reports.rb"
+			],
+			[
+				"routejs",
+				"app/assets/javascripts/routes.js.coffee"
+			],
+			[
+				"vehiclejs",
+				"app/assets/javascripts/backbone/models/vehicle.js.coffee"
+			],
+			[
+				"map",
+				"app/views/routes/map.html.haml"
+			],
+			[
+				"testpga",
+				"app/views/routes/testpage.html.haml"
+			],
+			[
+				"legjs",
+				"app/assets/javascripts/backbone/models/leg.js.coffee"
+			],
+			[
+				"vehijs",
+				"app/assets/javascripts/backbone/models/vehicle.js.coffee"
+			],
+			[
+				"vehicjs",
+				"app/assets/javascripts/backbone/models/vehicle.js.coffee"
+			],
+			[
+				"sftrans",
+				"config/initializers/sf_transit.rb"
+			],
+			[
+				"app",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"sftra",
+				"config/initializers/sf_transit.rb"
+			],
+			[
+				"legscont",
+				"app/controllers/legs_controller.rb"
+			],
+			[
+				"vehic",
+				"app/controllers/vehicles_controller.rb"
+			],
+			[
+				"legs",
+				"app/controllers/legs_controller.rb"
+			],
+			[
+				"sftran",
+				"config/initializers/sf_transit.rb"
+			],
+			[
+				"stopjs",
+				"app/assets/javascripts/backbone/models/stop.js.coffee"
+			],
+			[
+				"legstopjs",
+				"app/assets/javascripts/backbone/models/leg_stop.js.coffee"
+			],
+			[
+				"leg",
+				"app/controllers/leg_stops_controller.rb"
+			],
+			[
+				"stopsjs",
+				"app/assets/javascripts/leg_stops.js.coffee"
+			],
+			[
+				"stops",
+				"app/controllers/stops_controller.rb"
+			],
+			[
+				"legstopscont",
+				"app/controllers/leg_stops_controller.rb"
+			],
+			[
+				"legstop",
+				"app/assets/javascripts/backbone/models/leg_stop.js.coffee"
+			],
+			[
+				"helper",
+				"app/helpers/legs_helper.rb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"adddire",
+				"db/migrate/20121019174652_add_direction_to_leg.rb"
+			],
+			[
+				"adddi",
+				"test/dummy/db/migrate/20121019172812_add_direction_to_leg.rb"
+			],
+			[
+				"agencyname",
+				"app/models/sf_transit/agency_name.rb"
+			],
+			[
+				"agen",
+				"app/models/sf_transit/agency.rb"
+			],
+			[
+				"agency",
+				"app/models/sf_transit/agency.rb"
+			],
+			[
+				"sfagency",
+				"app/models/sf_transit/sf_transit/agency.rb"
+			],
+			[
+				"gems",
+				"sf_transit.gemspec"
+			],
+			[
+				"rake",
+				"lib/tasks/sf_transit_tasks.rake"
+			],
+			[
+				"gemspec",
+				"sf_transit.gemspec"
+			],
+			[
+				"dat",
+				"test/dummy/config/database.yml"
+			],
+			[
+				"css.scss",
+				"app/assets/stylesheets/landing.css.scss"
+			],
+			[
+				"fl",
+				"app/assets/javascripts/flipbook.js.coffee"
+			],
+			[
+				"land",
+				"app/assets/javascripts/landing.js.coffee"
+			],
+			[
+				"fli",
+				"app/assets/javascripts/flipbook.js.coffee"
+			],
+			[
+				"rroute",
+				"sftransit-rails/app/models/route.rb"
+			],
+			[
+				"apcon",
+				"sftransit-rails/app/controllers/application_controller.rb"
+			],
+			[
+				"junc",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"stop",
+				"sftransit-rails/app/models/stop.rb"
+			],
+			[
+				"view",
+				"src/coffee/models/map_view.coffee"
+			],
+			[
+				"leg_stop",
+				"sftransit-rails/app/models/leg_stop.rb"
+			],
+			[
+				"controller",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"routerb",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"marker",
+				"src/coffee/views/marker.coffee"
+			],
+			[
+				"junctioncontro",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"geoc",
+				"sftransit-rails/config/initializers/geocoder.rb"
+			],
+			[
+				"geocode",
+				"src/node_modules/jquery/node_modules/grunt/node_modules/connect/node_modules/debug/debug.js"
+			],
+			[
+				"createstop",
+				"sftransit-rails/db/migrate/20121009035423_create_stops.rb"
+			],
+			[
+				"createjun",
+				"sftransit-rails/db/migrate/20121008002646_create_junctions.rb"
+			],
+			[
+				"juncion",
+				"sftransit-rails/app/models/junction.rb"
+			],
+			[
+				"junctioncont",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"junction",
+				"sftransit-rails/app/models/junction.rb"
+			],
+			[
+				"createlegjunction",
+				"sftransit-rails/db/migrate/20121009031452_create_leg_junctions.rb"
+			],
+			[
+				"legjun",
+				"sftransit-rails/app/models/leg_junction.rb"
+			],
+			[
+				"routejn",
+				"sftransit-rails/app/models/route_junction.rb"
+			],
+			[
+				"creater",
+				"sftransit-rails/db/migrate/20121009025530_create_routes.rb"
+			],
+			[
+				"createroute",
+				"sftransit-rails/db/migrate/20121009025530_create_routes.rb"
+			],
+			[
+				"routecreate",
+				"src/node_modules/jquery/node_modules/grunt/node_modules/uglify-js/test/unit/compress/expected/forstatement.js"
+			],
+			[
+				"createroutju",
+				"sftransit-rails/db/migrate/20121009025556_create_route_junctions.rb"
+			],
+			[
+				"routejun",
+				"sftransit-rails/app/models/route_junction.rb"
+			],
+			[
+				"junctioncontr",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"maview",
+				"src/coffee/models/map_view.coffee"
+			],
+			[
+				"applicationjs",
+				"src/js/application.js"
+			],
+			[
+				"appl",
+				"src/js/applications.js"
+			],
+			[
+				"junctions",
+				"src/coffee/collections/junctions.coffee"
+			],
+			[
+				"junct",
+				"sftransit-rails/app/controllers/junctions_controller.rb"
+			],
+			[
+				"applcoff",
+				"src/coffee/routers/application.coffee"
+			],
+			[
+				"main",
+				"src/coffee/main.coffee"
+			],
+			[
+				"pack",
+				"src/package.json"
+			],
+			[
+				"jun",
+				"src/coffee/models/junction.coffee"
+			],
+			[
+				"mapview",
+				"src/coffee/models/map_view.coffee"
+			],
+			[
+				"j",
+				"src/coffee/models/junction.coffee"
+			],
+			[
+				"junci",
+				"src/coffee/collections/junctions.coffee"
+			],
+			[
+				"a",
+				"sftransit-rails/app/controllers/application_controller.rb"
+			],
+			[
+				"applicationcontr",
+				"sftransit-rails/app/controllers/application_controller.rb"
+			],
+			[
+				"apphtml",
+				"sftransit-rails/app/views/layouts/application.html.erb"
+			],
+			[
+				"ind",
+				"src/index.html"
+			],
+			[
+				"grunt",
+				"src/node_modules/jquery/node_modules/grunt-compare-size/grunt.js"
+			],
+			[
+				"jquery",
+				"src/node_modules/jquery/dist/jquery.min.js"
+			],
+			[
+				"pa",
+				"src/package.json"
+			],
+			[
+				"back",
+				"src/js/backbone.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true
+}
